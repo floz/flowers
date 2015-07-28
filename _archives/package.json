@@ -1,0 +1,77 @@
+{
+  "name": "Template",
+
+  "version": "1.0.0",
+
+  "description": "Simple template to start a project quickly",
+
+  "homepage": "https://github.com/Makio64/Template-Modules",
+
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+
+  "bugs": {
+    "url": "/issues"
+  },
+
+  "keywords": [
+    "boilerplate",
+    "starter",
+    "gulp",
+    "browserify",
+    "stylus",
+    "jade",
+    "coffee"
+  ],
+
+  "license": "MIT",
+
+  "authors": [
+    "florian.zumbrunn <florian.zumbrunn@gmail.com>"
+  ],
+
+  "engines": {
+    "node": "*",
+    "npm": "*"
+  },
+
+  "devDependencies": {
+    "browser-sync": "*",
+    "browserify": "*",
+    "watchify": "*",
+    "coffeeify": "*",
+    "coffee-script": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-coffee": "*",
+    "gulp-concat": "*",
+    "gulp-copy": "*",
+    "gulp-cssmin": "*",
+    "gulp-data": "*",
+    "gulp-imagemin": "*",
+    "gulp-jade": "*",
+    "gulp-minify-css": "*",
+    "gulp-minify-html": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-rev": "*",
+    "gulp-rev-collector": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "gulp-usemin": "*",
+    "jade": "*",
+    "nib": "*",
+    "run-sequence": "*",
+    "signals": "*",
+    "stylus": "*",
+    "vinyl-buffer": "*",
+    "vinyl-source-stream": "*",
+    "yargs": "*"
+  }
+}

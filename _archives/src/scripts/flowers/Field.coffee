@@ -1,9 +1,9 @@
 stage = require "fz/core/stage"
-Field = require "flowers/Field"
+Flowers = require "flowers/Flowers"
 
-class Flowers extends PIXI.Container
+class Field extends PIXI.Container
 
-    constructor: ->
+    constructor: ( @_grid ) ->
         super
 
         @_area = new PIXI.Graphics
@@ -19,6 +19,9 @@ class Flowers extends PIXI.Container
         x = e.data.global.x
         y = e.data.global.y
 
-        console.log x, y
+        flowers = new Flowers
+        flowers.x = x
+        flowers.y = y
+        @addChild flowers
 
-module.exports = Flowers
+module.exports = Field

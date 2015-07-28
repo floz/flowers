@@ -4,22 +4,31 @@ stage.init()
 lp = require "fz/core/loop"
 lp.start()
 
-pixi = require "pixi"
-pixi.init()
+engine = require "engine"
+engine.init()
 
 loader = require "loader"
 loader.init()
 
 resize = ->
-    pixi.resize stage.w, stage.h
+    engine.resize stage.w, stage.h
 stage.on "resize", resize
 resize()
 
 #
 
 loader.on "complete", ->
-    pixi.start()
+    console.log "complete"
+    engine.start()
+    # pixi.start()
     
-    flowers = new ( require "Flowers" )()
-    pixi.stage.addChild flowers
+    # grid = new ( require "Grid" )()
+    # pixi.stage.addChild grid
+
+    floor = new ( require "floor/Floor" )()
+    engine.scene.add floor
+
+    field = new ( require "flowers/Field" )()
+    engine.scene.add field
+
 loader.load()
