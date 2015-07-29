@@ -38,6 +38,10 @@ class Engine
         @camera.bottom = -stage.h * .5;
         @camera.updateProjectionMatrix();
 
+    setClearColor: ( value ) ->
+        @renderer.setClearColor value
+
+
     start: ->
         lp.add @_update
 

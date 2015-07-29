@@ -58,8 +58,14 @@ class Set
 # complementary
 # module.exports = -> uColors.generateHarmony 50, 0, 180, 0, 40, 50, 0, .75, .5
 
+HUE = 0
+
+module.exports.setHUE = ( value ) ->
+    HUE = value
+
 # analogous
-module.exports = -> uColors.generateHarmony 50, 300, 90, 180, 60, 0, 0, 1, .5
+module.exports.getFlowers = -> uColors.generateHarmony 50, HUE, 90, 180, 60, 0, 0, 1, .5
+module.exports.getFloor = -> uColors.generateHarmony 50, HUE + 180, 90, 180, 30, 0, 0, 1, .5
 
 # triad
 # module.exports = -> uColors.generateHarmony 50, 0, 120, 240, 10, 10, 10, 1, .5

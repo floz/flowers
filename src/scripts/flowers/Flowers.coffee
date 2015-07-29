@@ -4,7 +4,8 @@ lp = require "fz/core/loop"
 pool = require "flowers/pool"
 Flower = require "flowers/Flower"
 cFlowers = require "flowers/consts"
-colors = require "flowers/colors"
+
+colors = require "colors"
 
 PathDrawer = require "paths/PathDrawer"
 Linear = require "paths/Linear"
@@ -25,7 +26,7 @@ class Flowers extends THREE.Object3D
 
         # @_colors = @_generateColors()
 
-        @_origin = new Flower cFlowers.life, colors()
+        @_origin = new Flower cFlowers.life, colors.getFlowers()
         @add @_origin
 
         @_flowers = [ @_origin ]
@@ -80,7 +81,7 @@ class Flowers extends THREE.Object3D
         timeout @_update, 50
 
     _addFlower: ( pos, life ) ->
-        flower = new Flower life, colors()
+        flower = new Flower life, colors.getFlowers()
         flower.position.x = pos.x
         flower.position.y = pos.y
         @add flower

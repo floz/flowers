@@ -4,8 +4,12 @@ stage.init()
 lp = require "fz/core/loop"
 lp.start()
 
+colors = require "colors"
+colors.setHUE 20
+
 engine = require "engine"
 engine.init()
+engine.setClearColor colors.getFloor()[ 0 ].c
 
 loader = require "loader"
 loader.init()
@@ -25,8 +29,8 @@ loader.on "complete", ->
     # grid = new ( require "Grid" )()
     # pixi.stage.addChild grid
 
-    floor = new ( require "floor/Floor" )()
-    engine.scene.add floor
+    # floor = new ( require "floor/Floor" )()
+    # engine.scene.add floor
 
     field = new ( require "flowers/Field" )()
     engine.scene.add field

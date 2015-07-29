@@ -31,6 +31,7 @@ class Flower extends THREE.Object3D
         sRatio = @_life / cFlowers.life
         s = ( .7 + Math.random() * .3 ) * sRatio
         s = .35 if s < .35
+        s *= 1.65
         @.scale.x = 0.000001
         @.scale.y = 0.000001
         TweenLite.to @.scale, .6,
